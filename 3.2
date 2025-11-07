@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+class Student {
+private:
+    int rollNumber;
+    float marks;
+
+public:
+    void setDetails(int r, float m) {
+        rollNumber = r;
+        marks = m;
+    }
+
+    void displayDetails() {
+        cout << "Roll Number: " << rollNumber << endl;
+        cout << "Marks: " << marks << endl;
+    }
+};
+
+int main() {
+    Student s1;
+    s1.setDetails(101, 88.5);
+    s1.displayDetails();
+    return 0;
+}
