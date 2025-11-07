@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+void displayDetails(string name, int age = 18, string city = "Hyderabad") {
+    cout << "Name: " << name << endl;
+    cout << "Age: " << age << endl;
+    cout << "City: " << city << endl;
+    cout << "---------------------" << endl;
+}
+
+int main() {
+    cout << "Example of Default Arguments in C++\n\n";
+
+    displayDetails("Alice", 22, "Mumbai");
+
+    displayDetails("Bob", 25);
+
+    displayDetails("Charlie");
+
+    return 0;
+}
