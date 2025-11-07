@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+class Student {
+private:
+    int rollNumber;
+    float marks;
+
+public:
+    void setDetails(int rollNumber, float marks) {
+        this->rollNumber = rollNumber;
+        this->marks = marks;
+    }
+    void displayDetails() {
+        cout << "Roll Number: " << this->rollNumber << endl;
+        cout << "Marks: " << this->marks << endl;
+    }
+
+    Student& increaseMarks(float bonus) {
+        this->marks += bonus;
+        return *this;  
+    }
+};
+
+int main() {
+    Student s1;
+
+    s1.setDetails(101, 85.5);
+    s1.displayDetails();
+
+    cout << "\nAdding bonus marks...\n";
+    s1.increaseMarks(4.5).displayDetails(); 
+
+    return 0;
+}
